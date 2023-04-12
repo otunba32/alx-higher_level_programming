@@ -5,7 +5,7 @@ let square = '';
 if (parseInt(a)) {
   for (let p = 0; p < a; p++) {
     while (x < a) {
-      square += 'M';
+      square += 'X';
       x++;
     }
     console.log(square);
