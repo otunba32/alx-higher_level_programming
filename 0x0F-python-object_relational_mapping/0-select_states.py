@@ -2,7 +2,7 @@
 import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user="root", passwd="", bd="hbtn_0e_0_usa")
+    db = MySQLdb.connect(user="root", passwd="", db="hbtn_0e_0_usa")
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states")
     states = cursor.fetchall()
