@@ -14,15 +14,13 @@ if __name__ == '__main__':
             db=sys.argv[3],
             )
     cur = db.cursor()
-    myQuery = "".join([
-        "SELECT * FROM states WHERE name LIKE BINARY '{}'",
-        "ORDER BY id ASC",
-        ]).format(sys.argv[4])
+    myQuery = " ".join([
+        "SELECT * FROM states WHERE name LIKE BINARY '{}'",]).format(sys.argv[4])
     cur.execute(myQuery)
     curs = cur.fetchall()
 
     for rows in curs:
-        print(curs)
+        print(rows)
 
     cur.close()
     db.close()
