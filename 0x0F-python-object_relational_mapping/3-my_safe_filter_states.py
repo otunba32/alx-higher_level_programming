@@ -16,7 +16,7 @@ if __name__ == '__main__':
             db=sys.argv[3],
             )
     cr = db.cursor()
-    myQuery = "SELECT * FROM states WHERE name=%(name)s ORDER BY states.id ASC"
+    myQuery = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
     cr.execute(myQuery, {'name': sys.argv[4]})
     rows = cr.fetchall()
     for row in rows:
