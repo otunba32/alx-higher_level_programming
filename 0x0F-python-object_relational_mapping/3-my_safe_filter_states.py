@@ -16,10 +16,10 @@ if __name__ == '__main__':
             db=sys.argv[3],
             )
     cr = db.cursor()
-    myQuery = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
-    cr.execute(myQuery, {'name': sys.argv[4]})
+    cr.execute("SELECT * FROM states WHERE name LIKE %s", (sys.argv[4], ))
     rows = cr.fetchall()
     for row in rows:
         print(row)
+
     cr.close()
     db.close()
