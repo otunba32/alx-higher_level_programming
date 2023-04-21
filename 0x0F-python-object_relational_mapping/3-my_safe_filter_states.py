@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """A script (safe from MySQL injections) that displays
 all values in the states table of the database
-where name matches the argument and it is safe 
+where name matches the argument and it is safe
 from MySQL injections"""
 import MySQLdb
 import sys
